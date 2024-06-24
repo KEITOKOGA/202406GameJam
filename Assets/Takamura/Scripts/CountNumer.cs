@@ -14,7 +14,7 @@ public class CountNumber : MonoBehaviour
         tex = GetComponent<TextMeshPro>();
         //AddNumber–¼‘O•Ï‚í‚é‚ç‚µ‚¢
         AddNumber();
-        tex = nu
+        
     }
 
     private void Update()
