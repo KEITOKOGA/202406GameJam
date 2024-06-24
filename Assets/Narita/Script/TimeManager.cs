@@ -32,6 +32,7 @@ public class TimeManager : MonoBehaviour
         if (_timer <= 0)
         {
             _text.enabled = false;
+            SceneManagement.SceneChange("Result");
         }
     }
 }
