@@ -31,4 +31,8 @@ public class SceneManagement : MonoBehaviour
         IsScene = false;
         SceneChange("Standby");
     }
+    public void GetTitle()
+    {
+        SceneChange("Title");
+    }
 }

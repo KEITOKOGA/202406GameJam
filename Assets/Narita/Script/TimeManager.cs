@@ -22,8 +22,12 @@ public class TimeManager : MonoBehaviour
     {
         //テキスト表示
         _text.text = _timer.ToString("F2");
+        if (_timer < 10)
+        {
+            _text.text = "0" + _timer.ToString("F2");
+        }
         //_invokeTimeの分遅らせて制限時間のメソッドを呼び出す
-        Invoke(nameof(TimerStart),_invokeTime);
+        Invoke(nameof(TimerStart), _invokeTime);
     }
     void TimerStart() //制限時間のメソッド
     {
@@ -32,7 +36,10 @@ public class TimeManager : MonoBehaviour
         if (_timer <= 0)
         {
             _text.enabled = false;
-            SceneManagement.SceneChange("Result");
+            if (SceneManagement.IsScene == true)
+            {
+                SceneManagement.SceneChange("Result");
+            }
         }
     }
 }
