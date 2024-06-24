@@ -21,8 +21,12 @@ public class TimeManager : MonoBehaviour
     void Update()
     {
         //テキスト表示
-        _text.text = _timer.ToString("F2");
-        if (_timer < 10)
+        //_text.text = _timer.ToString("F2");
+        if (_timer >= 10)
+        {
+            _text.text = _timer.ToString("F2");
+        }
+        else
         {
             _text.text = "0" + _timer.ToString("F2");
         }
