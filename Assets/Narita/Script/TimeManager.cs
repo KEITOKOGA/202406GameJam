@@ -1,6 +1,8 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TimeManager : MonoBehaviour
@@ -11,6 +13,9 @@ public class TimeManager : MonoBehaviour
     [SerializeField] Text _text;
     [Header("ŠJŽn‚Ü‚Å‚ÌŽžŠÔ")]
     [SerializeField] float _invokeTime = 1;
+    [SerializeField] float _interval;
+    [SerializeField] Image _fadePanel = default;
+    [SerializeField] int _fadeMode;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +47,8 @@ public class TimeManager : MonoBehaviour
             _text.enabled = false;
             if (SceneManagement.IsScene == true)
             {
-                SceneManagement.SceneChange("Result");
+                _fadePanel.gameObject.SetActive(true);
+                this._fadePanel.material.DOFade(_fadeMode,_interval).OnComplete(()=> SceneManagement.SceneChange("Result"));
             }
         }
     }
