@@ -1,20 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class CountNumber : MonoBehaviour
 {
 
-    int num;
+    [SerializeField] TextMeshPro tex;
+    public int num;
 
     void Start()
     {
-        
+        tex = GetComponent<TextMeshPro>();
+        //AddNumber–¼‘O•Ï‚í‚é‚ç‚µ‚¢
+        AddNumber();
+        tex = nu
     }
 
     private void Update()
     {
-        AddNumber();
+        
     }
 
     private void AddNumber()
