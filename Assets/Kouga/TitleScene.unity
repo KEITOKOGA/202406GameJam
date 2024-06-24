@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 8111357}
   - component: {fileID: 8111356}
   m_Layer: 0
-  m_Name: white-empty-room8
+  m_Name: BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
