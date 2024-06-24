@@ -1,6 +1,8 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TimeManager : MonoBehaviour
@@ -11,6 +13,9 @@ public class TimeManager : MonoBehaviour
     [SerializeField] Text _text;
     [Header("開始までの時間")]
     [SerializeField] float _invokeTime = 1;
+    [SerializeField] float _interval;
+    [SerializeField] Image _fadePanel = default;
+    [SerializeField] int _fadeMode;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +26,17 @@ public class TimeManager : MonoBehaviour
     void Update()
     {
         //テキスト表示
-        _text.text = _timer.ToString("F2");
+        //_text.text = _timer.ToString("F2");
+        if (_timer >= 10)
+        {
+            _text.text = _timer.ToString("F2");
+        }
+        else
+        {
+            _text.text = "0" + _timer.ToString("F2");
+        }
         //_invokeTimeの分遅らせて制限時間のメソッドを呼び出す
-        Invoke(nameof(TimerStart),_invokeTime);
+        Invoke(nameof(TimerStart), _invokeTime);
     }
     void TimerStart() //制限時間のメソッド
     {
@@ -32,7 +45,11 @@ public class TimeManager : MonoBehaviour
         if (_timer <= 0)
         {
             _text.enabled = false;
-            SceneManagement.SceneChange("Result");
+            if (SceneManagement.IsScene == true)
+            {
+                _fadePanel.gameObject.SetActive(true);
+                this._fadePanel.material.DOFade(_fadeMode,_interval).OnComplete(()=> SceneManagement.SceneChange("Result"));
+            }
         }
     }
 }

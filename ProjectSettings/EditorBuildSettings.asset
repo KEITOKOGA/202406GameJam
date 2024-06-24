@@ -15,6 +15,12 @@ EditorBuildSettings:
     path: Assets/Narita/Scene/Nomal.unity
     guid: a397044573298c445a693356d33aeb05
   - enabled: 1
+    path: Assets/Narita/Scene/Title.unity
+    guid: 16f581e45dfe4a04494cb64c064ff9a3
+  - enabled: 1
+    path: Assets/Narita/Scene/Result.unity
+    guid: bb2ab767af6ee8e4a971302694a68d86
+  - enabled: 1
     path: Assets/Narita/Scene/Narita.unity
     guid: cdcbc4cca7c4b8245b01fe83082a89e8
   m_configObjects: {}
