@@ -13,9 +13,11 @@ public class TimeManager : MonoBehaviour
     [SerializeField] Text _text;
     [Header("開始までの時間")]
     [SerializeField] float _invokeTime = 1;
-    [SerializeField] float _interval;
-    [SerializeField] Image _fadePanel = default;
-    [SerializeField] int _fadeMode;
+    float _changeTimer;
+    [Header("リザルト画面に移行するまでの時間")]
+    [SerializeField] float _changeTime = 1;
+    [Header("タイムオーバー時に流したい音声")]
+    [SerializeField] AudioSource _audio;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,10 +47,18 @@ public class TimeManager : MonoBehaviour
         if (_timer <= 0)
         {
             _text.enabled = false;
-            if (SceneManagement.IsScene == true)
+            _changeTimer += Time.deltaTime;
+            if (_audio != null)
             {
-                _fadePanel.gameObject.SetActive(true);
-                this._fadePanel.material.DOFade(_fadeMode,_interval).OnComplete(()=> SceneManagement.SceneChange("Result"));
+                _audio.Play();
+            }
+            else if (_audio == null) 
+            {
+                Debug.LogWarning("AudioSourceにアタッチされていません");
+            }
+            if (SceneManagement.IsScene == true && _changeTimer >= _changeTime)
+            {
+                SceneManagement.SceneChange("Result");
             }
         }
     }
