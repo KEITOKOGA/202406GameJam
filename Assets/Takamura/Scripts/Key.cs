@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Key : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public bool a;
+
     void Start()
     {
+
         
     }
 
