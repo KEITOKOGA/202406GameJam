@@ -25,7 +25,7 @@ public class SceneChangeButton : MonoBehaviour
     IEnumerator DelayedSceneChange()
     {
         isCoroutineRunning = true;
-        yield return new WaitForSeconds(1f); // 3•b‘Ò‚Â
+        yield return new WaitForSeconds(.5f); // 3•b‘Ò‚Â
         SceneManager.LoadScene(targetSceneName); // w’è‚µ‚½ƒV[ƒ“–¼‚ÉˆÚ“®‚·‚é
         isCoroutineRunning = false;
     }
