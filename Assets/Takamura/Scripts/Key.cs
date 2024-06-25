@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class Key : MonoBehaviour
 {
-    [SerializeField] string resultChange; // 移動先のシーン名を指定する
+    [SerializeField] string _gameoverResult; // 移動先のシーン名を指定する
+    [SerializeField] string _successResult; // 移動先のシーン名を指定する
     [SerializeField] int[] _numbers;
     int[] nums = new int[9];
     int[] keytype = new[] {
@@ -69,7 +70,7 @@ public class Key : MonoBehaviour
 
             if (count == 9)
             {
-                SceneManager.LoadScene(resultChange);
+                SceneManager.LoadScene(_successResult);
             }
         }
 
@@ -78,7 +79,7 @@ public class Key : MonoBehaviour
             || Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.K)
             || Input.GetKeyDown(KeyCode.L) || Input.GetKeyDown(KeyCode.Semicolon)))
         {
-            SceneManager.LoadScene(resultChange);
+            SceneManager.LoadScene(_gameoverResult);
         }
     }
 
@@ -122,7 +123,7 @@ public class Key : MonoBehaviour
                 Debug.Log("st");
                 if (nums[count] != j)
                 {
-                    SceneManager.LoadScene(resultChange);
+                    SceneManager.LoadScene(_gameoverResult);
                 }
                 else if (nums[count] == j)
                 {
