@@ -11,9 +11,31 @@ public class AddScore : MonoBehaviour
 
     Text scoreText;
 
+    bool origin = false;
+
+    private void Awake()
+    {
+        if (origin == false)
+        {
+            DontDestroyOnLoad(this);
+
+            origin = true;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
     public void Start()
     {
         scoreText = GetComponent<Text>();
+
+        try
+        {
+            scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
+        }
+        catch { }
     }
 
     // Start is called before the first frame update
@@ -23,6 +45,7 @@ public class AddScore : MonoBehaviour
 
         scoreText.text = score.ToString();    
     }
+
 
     
 }
