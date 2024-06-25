@@ -1,11 +1,12 @@
+using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Key : MonoBehaviour
 {
-    [SerializeField] int[] numbers2;
+    [SerializeField] int[] _numbers;
     int[] nums = new int[9];
     int[] keytype = new[] {
-
             (int)KeyCode.A,
             (int)KeyCode.S,
             (int)KeyCode.D,
@@ -14,19 +15,35 @@ public class Key : MonoBehaviour
             (int)KeyCode.K,
             (int)KeyCode.L,
             (int)KeyCode.Semicolon,
-
         };
     bool suc;
-
     int count = 1;
+<<<<<<< HEAD
 
     [SerializeField]AddScore _addscore;
 
+=======
+    AddScore _addscore;
+>>>>>>> a542996f843b2316d340841bc6f1cf49a3ff8309
     int scr = 1;
+    [SerializeField] Text[] _order = new Text[8];
 
     void Start()
+<<<<<<< HEAD
     {
         _addscore = GetComponent<AddScore>();
+=======
+    {
+        int[] numbers = new int[8] { 1, 2, 3, 4, 5, 6, 7, 8 };
+
+        System.Random random = new System.Random();
+        numbers = numbers.OrderBy(x => random.Next()).ToArray();
+        _numbers = numbers;
+        for(int i = 0; i < numbers.Length; i++)
+        {
+            _order[i].text = _numbers[i].ToString();
+        }
+>>>>>>> a542996f843b2316d340841bc6f1cf49a3ff8309
         ParseNumber();
 
         Debug.Log("stop");
@@ -63,9 +80,9 @@ public class Key : MonoBehaviour
 
     public void ParseNumber()
     {
-        for (int i = 0; i < numbers2.Length; i++)
+        for (int i = 0; i < _numbers.Length; i++)
         {
-            int x = numbers2[i];
+            int x = _numbers[i];
 
             nums[x] = i;
         }
