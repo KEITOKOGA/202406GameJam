@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -305,6 +305,7 @@ MonoBehaviour:
   _timerAudio: {fileID: 432631634}
   _timerInterval: 10
   _audioObject: {fileID: 2841635366631350381, guid: e14d08a46d0d04945a8590a9ae27f3ec, type: 3}
+  _explosionObject: {fileID: 1991456936668324611, guid: 6cc6945df35256b478efcf979bb398e0, type: 3}
 --- !u!4 &432631633
 Transform:
   m_ObjectHideFlags: 0
@@ -314,7 +315,7 @@ Transform:
   m_GameObject: {fileID: 432631631}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 901.1181, y: 413.8738, z: -0.000049358925}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -779,7 +780,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1133008308}
+  - {fileID: 257915211}
   - {fileID: 1929298989}
   - {fileID: 1572789500}
-  - {fileID: 257915211}
   - {fileID: 432631633}
