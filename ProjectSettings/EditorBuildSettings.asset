@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/Release/Title.unity
     guid: 914902ad3551f134bb8796c230e48a3e
   - enabled: 1
-    path: Assets/Release/Result.unity
+    path: Assets/Release/TimeAttackResult.unity
     guid: 1ae843eacf526174c944fd29fbf41ab3
   - enabled: 1
     path: Assets/Release/InGame.unity
