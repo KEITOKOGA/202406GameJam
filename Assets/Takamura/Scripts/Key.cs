@@ -15,20 +15,15 @@ public class Key : MonoBehaviour
     bool p;
 
     CountNumber _countnum;
-
     [SerializeField] GameObject[] numbers;
-
     [SerializeField] int[] numbers2;
-
     int[] nums = new int[8];
-
     Dictionary<int, int> _dictionary;
 
     string[] array = { "a", "s", "d", "f", "j", "k", "l", "+" };
-        
     int[] keytype = new[] {
-           
-            (int)KeyCode.A, 
+
+            (int)KeyCode.A,
             (int)KeyCode.S,
             (int)KeyCode.D,
             (int)KeyCode.F,
@@ -36,11 +31,10 @@ public class Key : MonoBehaviour
             (int)KeyCode.K,
             (int)KeyCode.L,
             (int)KeyCode.Semicolon,
-       
+
         };
 
     int aaaa = 0;
-
     bool suc;
 
 
@@ -50,12 +44,11 @@ public class Key : MonoBehaviour
     }
     private void Update()
     {
-        
+
     }
 
     public void ParseNumber()
     {
-
         //var queue = new Queue<int>();
 
         //queue.Enqueue(numbers2[0]);
@@ -66,24 +59,16 @@ public class Key : MonoBehaviour
         //queue.Enqueue(numbers2[5]);
         //queue.Enqueue(numbers2[6]);
         //queue.Enqueue(numbers2[7]);
-        
+
         //nums = numbers2;   numbers    4 3 6 1 2 7 8 5
         //                   nums       3 4 1 0 7 2 5 6
-         //                             F J S A + D K L]nums[1] = 3
+        //                             F J S A + D K L]nums[1] = 3
 
         for (int i = 0; i < numbers2.Length; i++)
         {
             int x = numbers2[i];
-
             nums[x] = i;
         }
-
-
-        
-       
-
-       
-
 
         //_dictionary = new Dictionary<int, int>();
 
@@ -95,44 +80,30 @@ public class Key : MonoBehaviour
         //_dictionary.Add(numbers2[5], "K");
         //_dictionary.Add(numbers2[6], "L");
         //_dictionary.Add(numbers2[7], "+");
-
-
-
-
-
-
-
     }
 
     public void GetKey()
     {
-        for(int i = 1;i < 9;i++)
+        for (int i = 1; i < 9; i++)
         {
-
             for (int j = 0; j < 8; j++)
             {
-
-
                 if (Input.GetKeyUp((KeyCode)j))
                 {
                     if (nums[i] != j)
                     {
                         //false
                     }
-                    else if  (nums[i] == j)
+                    else if (nums[i] == j)
                     {
                         suc = true;
-                    }  
+                    }
                     else
                     {
-
                     }
                 }
-                
-
             }
-            
-        
+
             //if (Input.GetKeyUp(KeyCode.A) && a == false)
             //{
             //    a = true;
@@ -188,12 +159,6 @@ public class Key : MonoBehaviour
 
             //    p = true;
             //}
-
-          
         }
-
-        
-
     }
-
 }
