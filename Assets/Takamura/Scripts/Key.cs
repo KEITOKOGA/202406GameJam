@@ -18,22 +18,22 @@ public class Key : MonoBehaviour
         };
     bool suc;
     int count = 1;
-<<<<<<< HEAD
 
-    [SerializeField]AddScore _addscore;
 
-=======
+    [SerializeField] GameObject addscr;
+
+
     AddScore _addscore;
->>>>>>> a542996f843b2316d340841bc6f1cf49a3ff8309
+
     int scr = 1;
     [SerializeField] Text[] _order = new Text[8];
 
     void Start()
-<<<<<<< HEAD
+
     {
-        _addscore = GetComponent<AddScore>();
-=======
-    {
+        _addscore = addscr.GetComponent<AddScore>();
+
+    
         int[] numbers = new int[8] { 1, 2, 3, 4, 5, 6, 7, 8 };
 
         System.Random random = new System.Random();
@@ -43,7 +43,7 @@ public class Key : MonoBehaviour
         {
             _order[i].text = _numbers[i].ToString();
         }
->>>>>>> a542996f843b2316d340841bc6f1cf49a3ff8309
+     
         ParseNumber();
 
         Debug.Log("stop");
