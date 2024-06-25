@@ -78,7 +78,7 @@ public class Key : MonoBehaviour
             || Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.K)
             || Input.GetKeyDown(KeyCode.L) || Input.GetKeyDown(KeyCode.Semicolon)))
         {
-            Debug.Log("В«В©Б[Вс");
+            SceneManager.LoadScene(resultChange);
         }
     }
 
@@ -122,7 +122,7 @@ public class Key : MonoBehaviour
                 Debug.Log("st");
                 if (nums[count] != j)
                 {
-                    Debug.Log("В«В©Б[Вс");
+                    SceneManager.LoadScene(resultChange);
                 }
                 else if (nums[count] == j)
                 {
