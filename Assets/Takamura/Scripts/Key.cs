@@ -49,7 +49,7 @@ public class Key : MonoBehaviour
         _numbers = numbers;
         for (int i = 0; i < numbers.Length; i++)
         {
-            _order[i].text = _numbers[i].ToString();
+            //_order[i].text = _numbers[i].ToString();
         }
 
         ParseNumber();
@@ -67,7 +67,7 @@ public class Key : MonoBehaviour
             || Input.GetKeyUp(KeyCode.L) || Input.GetKeyUp(KeyCode.Semicolon))
         {
             GetKey();
-            count++;
+           
 
             //if (count == 9)
             //{
@@ -144,6 +144,7 @@ public class Key : MonoBehaviour
         {
             Debug.Log(count + "”Ô–Ú" + "¬Œ÷");
             scr++;
+            count++;
         }
     }
     void GetScene()
