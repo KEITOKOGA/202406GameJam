@@ -24,30 +24,34 @@ public class Key : MonoBehaviour
 
     int scr = 1;
     [SerializeField] Text[] _order = new Text[8];
+    [SerializeField] GameObject _explosionObject;
+    [SerializeField] string _sceneName;
+    TimerManager _timerManager;
 
     void Start()
 
     {
-        try
-        {
-            _addscore = GameObject.Find("ScoreManager").GetComponent<AddScore>();
-        }
-        catch
-        {
+        //_timerManager = GameObject.Find("TimeMan").GetComponent<TimerManager>();
+        //try
+        //{
+        //    _addscore = GameObject.Find("ScoreManager").GetComponent<AddScore>();
+        //}
+        //catch
+        //{
 
-        }
+        //}
 
-    
+
         int[] numbers = new int[8] { 1, 2, 3, 4, 5, 6, 7, 8 };
 
         System.Random random = new System.Random();
         numbers = numbers.OrderBy(x => random.Next()).ToArray();
         _numbers = numbers;
-        for(int i = 0; i < numbers.Length; i++)
+        for (int i = 0; i < numbers.Length; i++)
         {
             _order[i].text = _numbers[i].ToString();
         }
-     
+
         ParseNumber();
 
         Debug.Log("stop");
@@ -71,12 +75,15 @@ public class Key : MonoBehaviour
             //}
         }
 
-        if (scr > 1 &&(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S)
+        if (scr > 1 && (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S)
             || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.F)
             || Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.K)
             || Input.GetKeyDown(KeyCode.L) || Input.GetKeyDown(KeyCode.Semicolon)))
         {
             Debug.Log("Ç«Ç©Å[ÇÒ");
+            Instantiate(_explosionObject, transform.position, Quaternion.identity);
+            Invoke(nameof(GetScene), 3f);
+            _timerManager._timer = 0;
         }
     }
 
@@ -121,6 +128,9 @@ public class Key : MonoBehaviour
                 if (nums[count] != j)
                 {
                     Debug.Log("Ç«Ç©Å[ÇÒ");
+                    Instantiate(_explosionObject, transform.position, Quaternion.identity);
+                    Invoke(nameof(GetScene), 3f);
+                    _timerManager._timer = 0;
                 }
                 else if (nums[count] == j)
                 {
@@ -135,6 +145,10 @@ public class Key : MonoBehaviour
             Debug.Log(count + "î‘ñ⁄" + "ê¨å˜");
             scr++;
         }
+    }
+    void GetScene()
+    {
+        SceneManagement.SceneChange(_sceneName);
     }
 
 }
