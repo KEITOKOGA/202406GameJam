@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Release/InGame.unity
     guid: e8744f023cbc9d64da4431b8c729766d
+  - enabled: 1
+    path: Assets/Release/ScoreResult.unity
+    guid: ab8f896f7845d0b4db7ea9201315bb09
   m_configObjects: {}
