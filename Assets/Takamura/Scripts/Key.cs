@@ -27,6 +27,7 @@ public class Key : MonoBehaviour
 
     int scr = 1;
     [SerializeField] Text[] _order = new Text[8];
+    [SerializeField] GameObject _audioPurefab;
 
     void Start()
 
@@ -54,7 +55,7 @@ public class Key : MonoBehaviour
         ParseNumber();
 
         Debug.Log("stop");
-
+        
 
     }
 
@@ -66,7 +67,6 @@ public class Key : MonoBehaviour
             || Input.GetKeyUp(KeyCode.L) || Input.GetKeyUp(KeyCode.Semicolon))
         {
             GetKey();
-            count++;
 
             if (count == 9)
             {
@@ -108,6 +108,7 @@ public class Key : MonoBehaviour
         else
         {
             Debug.Log("error");
+
         }
 
 
@@ -123,7 +124,9 @@ public class Key : MonoBehaviour
                 Debug.Log("st");
                 if (nums[count] != j)
                 {
-                    SceneManager.LoadScene(_gameoverResult);
+                    Instantiate(_audioPurefab, transform.position, Quaternion.identity);
+                    Invoke(nameof(GetSceneFailed), 1);
+                    
                 }
                 else if (nums[count] == j)
                 {
@@ -136,8 +139,12 @@ public class Key : MonoBehaviour
         if (suc)
         {
             Debug.Log(count + "î‘ñ⁄" + "ê¨å˜");
+            count++;
             scr++;
         }
     }
-
+    void GetSceneFailed()
+    {
+        SceneManagement.SceneChange(_gameoverResult);
+    }
 }

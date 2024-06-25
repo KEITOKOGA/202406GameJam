@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Release/ScoreResult.unity
     guid: ab8f896f7845d0b4db7ea9201315bb09
+  - enabled: 1
+    path: Assets/Release/FailedResult.unity
+    guid: fa1deb2dec8cc6347b19ba9467af9a76
   m_configObjects: {}
