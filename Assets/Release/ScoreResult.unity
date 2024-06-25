@@ -220,6 +220,18 @@ PrefabInstance:
       value: "3\u4F4D"
       objectReference: {fileID: 0}
     - target: {fileID: 7602474766002902326, guid: b8ca388cf93f03c4893920620c5f4cf4, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7602474766002902326, guid: b8ca388cf93f03c4893920620c5f4cf4, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7602474766002902326, guid: b8ca388cf93f03c4893920620c5f4cf4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7602474766002902326, guid: b8ca388cf93f03c4893920620c5f4cf4, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: e1b93020864064d4e87721fec642517c, type: 3}
@@ -241,6 +253,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2112404882}
     m_Modifications:
+    - target: {fileID: 3564714108034522210, guid: 6b3fedc8fa539464694352a2396c5981, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564714108034522210, guid: 6b3fedc8fa539464694352a2396c5981, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564714108034522210, guid: 6b3fedc8fa539464694352a2396c5981, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5054816353452579272, guid: 6b3fedc8fa539464694352a2396c5981, type: 3}
       propertyPath: m_Name
       value: ScoreText (1)
@@ -430,6 +454,18 @@ PrefabInstance:
     - target: {fileID: 7602474766002902326, guid: b8ca388cf93f03c4893920620c5f4cf4, type: 3}
       propertyPath: m_Text
       value: "2\u4F4D"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7602474766002902326, guid: b8ca388cf93f03c4893920620c5f4cf4, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7602474766002902326, guid: b8ca388cf93f03c4893920620c5f4cf4, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7602474766002902326, guid: b8ca388cf93f03c4893920620c5f4cf4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7602474766002902326, guid: b8ca388cf93f03c4893920620c5f4cf4, type: 3}
       propertyPath: m_FontData.m_Font
@@ -740,6 +776,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2112404882}
     m_Modifications:
+    - target: {fileID: 3564714108034522210, guid: 6b3fedc8fa539464694352a2396c5981, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564714108034522210, guid: 6b3fedc8fa539464694352a2396c5981, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564714108034522210, guid: 6b3fedc8fa539464694352a2396c5981, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5054816353452579272, guid: 6b3fedc8fa539464694352a2396c5981, type: 3}
       propertyPath: m_Name
       value: ScoreText (2)
@@ -929,6 +977,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2112404882}
     m_Modifications:
+    - target: {fileID: 3564714108034522210, guid: 6b3fedc8fa539464694352a2396c5981, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564714108034522210, guid: 6b3fedc8fa539464694352a2396c5981, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564714108034522210, guid: 6b3fedc8fa539464694352a2396c5981, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5054816353452579272, guid: 6b3fedc8fa539464694352a2396c5981, type: 3}
       propertyPath: m_Name
       value: ScoreText (4)
@@ -1212,6 +1272,18 @@ PrefabInstance:
       value: "5\u4F4D"
       objectReference: {fileID: 0}
     - target: {fileID: 7602474766002902326, guid: b8ca388cf93f03c4893920620c5f4cf4, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7602474766002902326, guid: b8ca388cf93f03c4893920620c5f4cf4, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7602474766002902326, guid: b8ca388cf93f03c4893920620c5f4cf4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7602474766002902326, guid: b8ca388cf93f03c4893920620c5f4cf4, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: e1b93020864064d4e87721fec642517c, type: 3}
@@ -1233,6 +1305,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2112404882}
     m_Modifications:
+    - target: {fileID: 3564714108034522210, guid: 6b3fedc8fa539464694352a2396c5981, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564714108034522210, guid: 6b3fedc8fa539464694352a2396c5981, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564714108034522210, guid: 6b3fedc8fa539464694352a2396c5981, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5054816353452579272, guid: 6b3fedc8fa539464694352a2396c5981, type: 3}
       propertyPath: m_Name
       value: ScoreText (3)
@@ -1422,6 +1506,18 @@ PrefabInstance:
     - target: {fileID: 7602474766002902326, guid: b8ca388cf93f03c4893920620c5f4cf4, type: 3}
       propertyPath: m_Text
       value: "4\u4F4D"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7602474766002902326, guid: b8ca388cf93f03c4893920620c5f4cf4, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7602474766002902326, guid: b8ca388cf93f03c4893920620c5f4cf4, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7602474766002902326, guid: b8ca388cf93f03c4893920620c5f4cf4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7602474766002902326, guid: b8ca388cf93f03c4893920620c5f4cf4, type: 3}
       propertyPath: m_FontData.m_Font
@@ -1637,6 +1733,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2112404882}
     m_Modifications:
+    - target: {fileID: 3564714108034522210, guid: 6b3fedc8fa539464694352a2396c5981, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564714108034522210, guid: 6b3fedc8fa539464694352a2396c5981, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564714108034522210, guid: 6b3fedc8fa539464694352a2396c5981, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5054816353452579272, guid: 6b3fedc8fa539464694352a2396c5981, type: 3}
       propertyPath: m_Name
       value: ScoreText
@@ -1826,6 +1934,18 @@ PrefabInstance:
     - target: {fileID: 7602474766002902326, guid: b8ca388cf93f03c4893920620c5f4cf4, type: 3}
       propertyPath: m_Text
       value: "1\u4F4D"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7602474766002902326, guid: b8ca388cf93f03c4893920620c5f4cf4, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7602474766002902326, guid: b8ca388cf93f03c4893920620c5f4cf4, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7602474766002902326, guid: b8ca388cf93f03c4893920620c5f4cf4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7602474766002902326, guid: b8ca388cf93f03c4893920620c5f4cf4, type: 3}
       propertyPath: m_FontData.m_Font
