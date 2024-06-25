@@ -1,9 +1,11 @@
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Key : MonoBehaviour
 {
+    [SerializeField] string resultChange; // ˆÚ“®æ‚ÌƒV[ƒ“–¼‚ðŽw’è‚·‚é
     [SerializeField] int[] _numbers;
     int[] nums = new int[9];
     int[] keytype = new[] {
@@ -65,10 +67,10 @@ public class Key : MonoBehaviour
             GetKey();
             count++;
 
-            //if (count == 9)
-            //{
-            //    _addscore.CountScore();
-            //}
+            if (count == 9)
+            {
+                SceneManager.LoadScene(resultChange);
+            }
         }
 
         if (scr > 1 &&(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S)
