@@ -147,13 +147,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475886253}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fa9058c150dec8418cd902d2483e827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tex: {fileID: 0}
+  _numberText: {fileID: 0}
+  _numberText1: {fileID: 0}
+  _numberText2: {fileID: 0}
+  _numberText3: {fileID: 0}
+  _numberText4: {fileID: 0}
+  _numberText5: {fileID: 0}
+  _numberText6: {fileID: 0}
+  _numberText7: {fileID: 0}
   num: 0
+  _numbers: 
 --- !u!4 &475886255
 Transform:
   m_ObjectHideFlags: 0
@@ -178,6 +186,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 986580992}
+  - component: {fileID: 986580993}
   m_Layer: 0
   m_Name: Add
   m_TagString: Untagged
@@ -200,6 +209,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &986580993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986580991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 739268f0abc058b4f81fb20b09aa84d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numbers2: 0300000002000000010000000400000005000000080000000700000006000000
 --- !u!1 &1136201249
 GameObject:
   m_ObjectHideFlags: 0
