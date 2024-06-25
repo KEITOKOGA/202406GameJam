@@ -17,6 +17,10 @@ public class TimerMan : MonoBehaviour
     [SerializeField] Image _fadePanel = default;
     [Header("フェードが終わるまでの時間")]
     [SerializeField] int _EndFadeMode;
+    [SerializeField] AudioSource _timerAudio;
+    [SerializeField] int _timerInterval = 1;
+    int _pulusTimer = 1;
+    [SerializeField] GameObject _audioObject;
 
     void Start()
     {
@@ -55,15 +59,22 @@ public class TimerMan : MonoBehaviour
         {
             _timer -= Time.deltaTime;
             yield return null;
+            if (_timer <= _timerInterval && _timer >= .5)
+            {
+                _timerAudio.Play();
+                _timerInterval -= _pulusTimer;
+            }
         }
 
         // タイマーが0になったら0に固定
         _timer = 0;
         _text.enabled = false;
+        
 
         if (SceneManagement.IsScene == true)
         {
             _fadePanel.gameObject.SetActive(true);
+            Instantiate(_audioObject,transform.position, Quaternion.identity);
             _fadePanel.material.DOFade(_EndFadeMode, _interval).OnComplete(() => SceneManagement.SceneChange("Result"));
         }
     }
