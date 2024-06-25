@@ -28,7 +28,14 @@ public class Key : MonoBehaviour
     void Start()
 
     {
-        _addscore = GameObject.Find("ScoreManager").GetComponent<AddScore>();
+        try
+        {
+            _addscore = GameObject.Find("ScoreManager").GetComponent<AddScore>();
+        }
+        catch
+        {
+
+        }
 
     
         int[] numbers = new int[8] { 1, 2, 3, 4, 5, 6, 7, 8 };
@@ -58,10 +65,10 @@ public class Key : MonoBehaviour
             GetKey();
             count++;
 
-            if (count == 9)
-            {
-                _addscore.CountScore();
-            }
+            //if (count == 9)
+            //{
+            //    _addscore.CountScore();
+            //}
         }
 
         if (scr > 1 &&(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S)

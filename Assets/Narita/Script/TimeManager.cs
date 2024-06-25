@@ -20,7 +20,7 @@ public class TimeManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        SceneManagement.IsInGame = false;
     }
 
     // Update is called once per frame
@@ -51,7 +51,7 @@ public class TimeManager : MonoBehaviour
             {
                 _audio.Play();
             }
-            else if (_audio == null) 
+            else if (_audio == null)
             {
                 Debug.LogWarning("AudioSourceにアタッチされていません");
             }

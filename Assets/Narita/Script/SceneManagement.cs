@@ -5,6 +5,12 @@ public class SceneManagement : MonoBehaviour
 {
     public static bool IsScene = true;
     public static bool IsInGame = true;
+    [Header("タイムアタックインゲームシーン")]
+    [SerializeField] string _sceneNormal;
+    [Header("エンドレスインゲームシーン")]
+    [SerializeField] string _sceneEnd;
+    [Header("タイトルシーン")]
+    [SerializeField] string _sceneTitle;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,17 +40,17 @@ public class SceneManagement : MonoBehaviour
     }
     public void GetNomal()//タイムアタックモード
     {
+        SceneChange(_sceneNormal);
         IsScene = true;
-        SceneChange("Standby");
     }
     public void GetScoreAttack()//エンドレスモード
     {
+        SceneChange(_sceneEnd);
         IsScene = false;
-        SceneChange("Standby");
     }
     public void GetTitle()//タイトル
     {
-        SceneChange("Title");
+        SceneChange(_sceneTitle);
         IsInGame = true;
     }
 }

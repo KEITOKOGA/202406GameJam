@@ -39,12 +39,12 @@ public class AddScore : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    public void CountScore()
-    {
-        score++;
+    //public void CountScore()
+    //{
+    //    score++;
 
-        scoreText.text = score.ToString();    
-    }
+    //    scoreText.text = score.ToString();    
+    //}
 
 
     

@@ -313,7 +313,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 425809364}
-  - component: {fileID: 425809363}
+  - component: {fileID: 425809365}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -321,21 +321,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &425809363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 425809362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e8ab96f9078f654db86b7ec8f38147e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _timer: 10
-  _text: {fileID: 131102454}
-  _invokeTime: 1
 --- !u!4 &425809364
 Transform:
   m_ObjectHideFlags: 0
@@ -351,6 +336,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &425809365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425809362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47b11031a093e8f43974d237b8597f03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timer: 0
+  _text: {fileID: 0}
+  _invokeTime: 0
+  _interval: 0
+  _fadePanel: {fileID: 0}
+  _EndFadeMode: 0
+  _timerAudio: {fileID: 0}
+  _timerInterval: 1
+  _audioObject: {fileID: 0}
+  _explosionObject: {fileID: 0}
 --- !u!1 &587700606
 GameObject:
   m_ObjectHideFlags: 0
