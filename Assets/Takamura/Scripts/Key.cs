@@ -39,17 +39,17 @@ public class Key : MonoBehaviour
 
         }
 
-    
+
         int[] numbers = new int[8] { 1, 2, 3, 4, 5, 6, 7, 8 };
 
         System.Random random = new System.Random();
         numbers = numbers.OrderBy(x => random.Next()).ToArray();
         _numbers = numbers;
-        for(int i = 0; i < numbers.Length; i++)
+        for (int i = 0; i < numbers.Length; i++)
         {
             _order[i].text = _numbers[i].ToString();
         }
-     
+
         ParseNumber();
 
         Debug.Log("stop");
@@ -73,7 +73,7 @@ public class Key : MonoBehaviour
             }
         }
 
-        if (scr > 1 &&(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S)
+        if (scr > 1 && (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S)
             || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.F)
             || Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.K)
             || Input.GetKeyDown(KeyCode.L) || Input.GetKeyDown(KeyCode.Semicolon)))
@@ -140,7 +140,3 @@ public class Key : MonoBehaviour
     }
 
 }
-
-
-
-

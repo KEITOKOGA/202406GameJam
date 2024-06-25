@@ -732,7 +732,7 @@ MonoBehaviour:
   _timerAudio: {fileID: 432631634}
   _timerInterval: 10
   _audioObject: {fileID: 2841635366631350381, guid: e14d08a46d0d04945a8590a9ae27f3ec, type: 3}
-  _explosionObject: {fileID: 1991456936668324611, guid: 6cc6945df35256b478efcf979bb398e0, type: 3}
+  _explosionObject: {fileID: 5010686634366963478, guid: b2071acf9125d1046949eb383872c6a4, type: 3}
   _sceneResult: TimeAttackResult
   _sceneResultEnd: 
 --- !u!1 &746557920
@@ -1848,6 +1848,8 @@ MonoBehaviour:
   - {fileID: 2093090060}
   - {fileID: 758152139}
   - {fileID: 1992969639}
+  _explosionObject: {fileID: 5010686634366963478, guid: b2071acf9125d1046949eb383872c6a4, type: 3}
+  _sceneName: TimeAttackResult
 --- !u!1 &1992969637
 GameObject:
   m_ObjectHideFlags: 0

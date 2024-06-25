@@ -6,7 +6,7 @@ using System.Collections;
 public class TimerManager : MonoBehaviour
 {
     [Header("タイマー")]
-    [SerializeField] float _timer;
+    public float _timer;
     [Header("テキスト")]
     [SerializeField] Text _text;
     [Header("始まるまでの時間")]
@@ -29,6 +29,7 @@ public class TimerManager : MonoBehaviour
     [SerializeField] string _sceneResult;
     [Header("エンドレスリザルトシーン")]
     [SerializeField] string _sceneResultEnd;
+    [SerializeField] float _bibiraseTime;
 
     void Start()
     {
@@ -44,6 +45,7 @@ public class TimerManager : MonoBehaviour
         {
             _text.text = (_timer >= 10) ? _timer.ToString("F2") : "0" + _timer.ToString("F2");
         }
+        
     }
 
     IEnumerator IntervalCoroutine()
@@ -64,40 +66,47 @@ public class TimerManager : MonoBehaviour
 
     IEnumerator TimerCoroutine()
     {
-        while (_timer > 0)
         {
-            _timer -= Time.deltaTime;
-            yield return null;
-            if (_timer <= _timerInterval && _timer >= .5)
+            while (_timer > 0)
             {
-                if (_timerAudio != null)
+                _timer -= Time.deltaTime;
+                yield return null;
+                if (_timer <= _timerInterval && _timer >= .5)
                 {
-                    _timerAudio.Play();
-                    _timerInterval -= _pulusTimer;
+                    if (_timerAudio != null)
+                    {
+                        _timerAudio.Play();
+                        _timerInterval -= _pulusTimer;
+                    }
+                    else
+                    {
+                        Debug.LogWarning("Audioがnullやで");
+                    }
+                    //if (_timer <= _bibiraseTime)
+                    //{
+                    //    Instantiate(_audioObject, transform.position, Quaternion.identity);
+                    //}
                 }
-                else
-                {
-                    Debug.LogWarning("Audioがnullやで");
-                }
-            }
-        }
 
-        // タイマーが0になったら0に固定
-        _timer = 0;
-        _text.enabled = false;
-        if (SceneManagement.IsScene == true)
-        {
-            _fadePanel.gameObject.SetActive(true);
-            Instantiate(_audioObject, transform.position, Quaternion.identity);
-            Instantiate(_explosionObject, transform.position, Quaternion.identity);
-            _fadePanel.material.DOFade(_EndFadeMode, _interval).OnComplete(() => SceneManagement.SceneChange(_sceneResult));
-        }
-        else if (SceneManagement.IsScene == false)
-        {
-            _fadePanel.gameObject.SetActive(true);
-            Instantiate(_audioObject, transform.position, Quaternion.identity);
-            Instantiate(_explosionObject, transform.position, Quaternion.identity);
-            _fadePanel.material.DOFade(_EndFadeMode, _interval).OnComplete(() => SceneManagement.SceneChange(_sceneResultEnd));
+            }
+         
+
+            // タイマーが0になったら0に固定
+            _timer = 0;
+            _text.enabled = false;
+
+            if (SceneManagement.IsScene == true)
+            {
+                _fadePanel.gameObject.SetActive(true);
+                Instantiate(_explosionObject, transform.position, Quaternion.identity);
+                _fadePanel.material.DOFade(_EndFadeMode, _interval).OnComplete(() => SceneManagement.SceneChange(_sceneResult));
+            }
+            else if (SceneManagement.IsScene == false)
+            {
+                _fadePanel.gameObject.SetActive(true);
+                Instantiate(_explosionObject, transform.position, Quaternion.identity);
+                _fadePanel.material.DOFade(_EndFadeMode, _interval).OnComplete(() => SceneManagement.SceneChange(_sceneResultEnd));
+            }
         }
     }
 }
