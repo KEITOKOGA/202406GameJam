@@ -20,17 +20,17 @@ public class Key : MonoBehaviour
 
     int count = 1;
 
-    AddScore _addscore;
+    [SerializeField]AddScore _addscore;
 
     int scr = 1;
 
     void Start()
     {
+        _addscore = GetComponent<AddScore>();
         ParseNumber();
 
         Debug.Log("stop");
 
-        _addscore = GetComponent<AddScore>();
 
     }
 

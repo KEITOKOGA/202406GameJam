@@ -1,20 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AddScore : MonoBehaviour
 {
+    [SerializeField]GameObject ScrText;
+
     public static int score = 0;
 
-    // Start is called before the first frame update
-   public void CountScore()
+    Text scoreText;
+
+    public void Start()
     {
-        score++;
+        scoreText = GetComponent<Text>();
     }
 
-    // Update is called once per frame
-    void Update()
+    // Start is called before the first frame update
+    public void CountScore()
     {
-        
+        score++;
+
+        scoreText.text = score.ToString();    
     }
+
+    
 }
