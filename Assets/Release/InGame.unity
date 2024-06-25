@@ -735,6 +735,7 @@ MonoBehaviour:
   _explosionObject: {fileID: 5010686634366963478, guid: b2071acf9125d1046949eb383872c6a4, type: 3}
   _sceneResult: TimeAttackResult
   _sceneResultEnd: 
+  _bibiraseTime: 0
 --- !u!1 &746557920
 GameObject:
   m_ObjectHideFlags: 0
@@ -1838,6 +1839,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 739268f0abc058b4f81fb20b09aa84d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameoverResult: TimeAttackResult
+  _successResult: FailedResult
   _numbers: 
   _order:
   - {fileID: 746557922}
@@ -1848,8 +1851,7 @@ MonoBehaviour:
   - {fileID: 2093090060}
   - {fileID: 758152139}
   - {fileID: 1992969639}
-  _explosionObject: {fileID: 5010686634366963478, guid: b2071acf9125d1046949eb383872c6a4, type: 3}
-  _sceneName: TimeAttackResult
+  _audioPurefab: {fileID: 5010686634366963478, guid: b2071acf9125d1046949eb383872c6a4, type: 3}
 --- !u!1 &1992969637
 GameObject:
   m_ObjectHideFlags: 0
