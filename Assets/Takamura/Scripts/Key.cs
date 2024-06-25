@@ -16,11 +16,11 @@ public class Key : MonoBehaviour
 
     CountNumber _countnum;
 
-    [SerializeField] GameObject[] numbers;
+    //[SerializeField] GameObject[] numbers;
 
     [SerializeField] int[] numbers2;
 
-    int[] nums = new int[8];
+    int[] nums = new int[9];
 
     Dictionary<int, int> _dictionary;
 
@@ -46,7 +46,9 @@ public class Key : MonoBehaviour
 
     void Start()
     {
+        ParseNumber();
 
+       GetKey();
     }
     private void Update()
     {
@@ -108,29 +110,35 @@ public class Key : MonoBehaviour
     {
         for(int i = 1;i < 9;i++)
         {
-
-            for (int j = 0; j < 8; j++)
-            {
-
-
-                if (Input.GetKeyUp((KeyCode)j))
+            suc= false; 
+            for(; ; ){
+                for (int j = 0; j < 8; j++)
                 {
-                    if (nums[i] != j)
+
+
+                    if (Input.GetKeyUp((KeyCode)j))
                     {
-                        //false
-                    }
-                    else if  (nums[i] == j)
-                    {
-                        suc = true;
-                    }  
-                    else
-                    {
+                        if (nums[i] != j)
+                        {
+                            Debug.Log("Ž¸”s");
+                        }
+                        else if (nums[i] == j)
+                        {
+                            suc = true;
+                        }
 
                     }
                 }
+
+                    if (suc)
+                    {
+                    Debug.Log(i + "”Ô–Ú" + "¬Œ÷");
+                        break;
+                    }
                 
 
             }
+
             
         
             //if (Input.GetKeyUp(KeyCode.A) && a == false)

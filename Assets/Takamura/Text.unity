@@ -152,6 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fa9058c150dec8418cd902d2483e827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tex: {fileID: 0}
+  num: 0
 --- !u!4 &475886255
 Transform:
   m_ObjectHideFlags: 0
@@ -177,7 +179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 986580992}
   m_Layer: 0
-  m_Name: Count
+  m_Name: Add
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
