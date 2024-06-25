@@ -2,23 +2,8 @@ using UnityEngine;
 
 public class Key : MonoBehaviour
 {
-    bool a;
-    bool s;
-    bool d;
-    bool f;
-    bool h;
-    bool j;
-    bool k;
-    bool l;
-    bool p;
-
-    CountNumber _countnum;
-
-    //[SerializeField] GameObject[] numbers;
-
     [SerializeField] int[] numbers2;
     int[] nums = new int[9];
-    //string[] array = { "a", "s", "d", "f", "j", "k", "l", "+" };   
     int[] keytype = new[] {
 
             (int)KeyCode.A,
@@ -35,12 +20,18 @@ public class Key : MonoBehaviour
 
     int count = 1;
 
+    AddScore _addscore;
+
+    int scr = 1;
+
     void Start()
     {
         ParseNumber();
 
         Debug.Log("stop");
-       
+
+        _addscore = GetComponent<AddScore>();
+
     }
 
     private void Update()
@@ -52,8 +43,23 @@ public class Key : MonoBehaviour
         {
             GetKey();
             count++;
+
+            if (count == 9)
+            {
+                _addscore.CountScore();
+            }
+        }
+
+        if (scr > 1 &&(Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S)
+            || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.F)
+            || Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.K)
+            || Input.GetKeyDown(KeyCode.L) || Input.GetKeyDown(KeyCode.Semicolon)))
+        {
+            Debug.Log("Ç«Ç©Å[ÇÒ");
         }
     }
+
+
 
     public void ParseNumber()
     {
@@ -93,7 +99,7 @@ public class Key : MonoBehaviour
                 Debug.Log("st");
                 if (nums[count] != j)
                 {
-                    Debug.Log("é∏îs");
+                    Debug.Log("Ç«Ç©Å[ÇÒ");
                 }
                 else if (nums[count] == j)
                 {
@@ -106,7 +112,7 @@ public class Key : MonoBehaviour
         if (suc)
         {
             Debug.Log(count + "î‘ñ⁄" + "ê¨å˜");
-
+            scr++;
         }
     }
 
