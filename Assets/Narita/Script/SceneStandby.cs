@@ -24,10 +24,12 @@ public class SceneStandby : MonoBehaviour
         if (SceneManagement.IsScene == true)
         {
             SceneManagement.SceneChange("Nomal");
+            SceneManagement.IsInGame = false;
         }
         else if (SceneManagement.IsScene == false)
         {
             SceneManagement.SceneChange("ScoreAttack");
+            SceneManagement.IsInGame = false;
         }
     }
 }
