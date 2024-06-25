@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class SceneChangeButton : MonoBehaviour
+public class SceneBackButtun : MonoBehaviour
 {
     [SerializeField] string targetSceneName; // ˆÚ“®æ‚ÌƒV[ƒ“–¼‚ğw’è‚·‚é
     private bool isCoroutineRunning = false;
