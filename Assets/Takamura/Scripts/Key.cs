@@ -20,9 +20,6 @@ public class Key : MonoBehaviour
     int count = 1;
 
 
-    [SerializeField] GameObject addscr;
-
-
     AddScore _addscore;
 
     int scr = 1;
@@ -31,7 +28,7 @@ public class Key : MonoBehaviour
     void Start()
 
     {
-        _addscore = addscr.GetComponent<AddScore>();
+        _addscore = GameObject.Find("ScoreManager").GetComponent<AddScore>();
 
     
         int[] numbers = new int[8] { 1, 2, 3, 4, 5, 6, 7, 8 };
