@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Key : MonoBehaviour
@@ -22,8 +20,8 @@ public class Key : MonoBehaviour
     int[] nums = new int[9];
     //string[] array = { "a", "s", "d", "f", "j", "k", "l", "+" };   
     int[] keytype = new[] {
-           
-            (int)KeyCode.A, 
+
+            (int)KeyCode.A,
             (int)KeyCode.S,
             (int)KeyCode.D,
             (int)KeyCode.F,
@@ -31,15 +29,32 @@ public class Key : MonoBehaviour
             (int)KeyCode.K,
             (int)KeyCode.L,
             (int)KeyCode.Semicolon,
-       
+
         };
     bool suc;
 
-    void Update()
+    int count = 1;
+
+    void Start()
     {
-       ParseNumber();
-       GetKey();
+        ParseNumber();
+
+        Debug.Log("stop");
+       
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S)
+            || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.F)
+            || Input.GetKeyUp(KeyCode.J) || Input.GetKeyUp(KeyCode.K)
+            || Input.GetKeyUp(KeyCode.L) || Input.GetKeyUp(KeyCode.Semicolon))
+        {
+            GetKey();
+            count++;
+        }
+    }
+
     public void ParseNumber()
     {
         for (int i = 0; i < numbers2.Length; i++)
@@ -52,47 +67,51 @@ public class Key : MonoBehaviour
 
     public void GetKey()
     {
-        if (Input.GetKeyDown(KeyCode.A) && Input.GetKeyDown(KeyCode.S) &&
-            Input.GetKeyDown(KeyCode.D) && Input.GetKeyDown(KeyCode.F) &&
-            Input.GetKeyDown(KeyCode.J) && Input.GetKeyDown(KeyCode.K) &&
-            Input.GetKeyDown(KeyCode.L) && Input.GetKeyDown(KeyCode.Semicolon) )
+        if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.S) &&
+            Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.F) &&
+            Input.GetKey(KeyCode.J) && Input.GetKey(KeyCode.K) &&
+            Input.GetKey(KeyCode.L) && Input.GetKey(KeyCode.Semicolon))
         {
             Debug.Log("ok");
 
         }
-        else { Debug.Log("error"); }
-
-        for (int i = 1;i < 9;i++)
+        else
         {
-            suc= false; 
-            for(; ; ){
-                for (int j = 0; j < 8; j++)
+            Debug.Log("error");
+        }
+
+
+
+        suc = false;
+
+        for (int j = 0; j < 8; j++)
+        {
+
+
+            if (Input.GetKeyUp((KeyCode)keytype[j]))
+            {
+                Debug.Log("st");
+                if (nums[count] != j)
                 {
-
-
-                    if (Input.GetKeyUp((KeyCode)keytype[j]))
-                    {
-                        if (nums[i] != j)
-                        {
-                            Debug.Log("Ž¸”s");
-                        }
-                        else if (nums[i] == j)
-                        {
-                            suc = true;
-                        }
-
-                    }
+                    Debug.Log("Ž¸”s");
+                }
+                else if (nums[count] == j)
+                {
+                    suc = true;
                 }
 
-                if (suc)
-                {
-                    Debug.Log(i + "”Ô–Ú" + "¬Œ÷");
-                    break;
-                }
             }
-          
-        }       
+        }
 
+        if (suc)
+        {
+            Debug.Log(count + "”Ô–Ú" + "¬Œ÷");
+
+        }
     }
 
 }
+
+
+
+
